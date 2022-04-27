@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+	<style>
+		
+		html {
+    height: 100%;
+  }
+  body {
+	width:40%;
+  margin: auto;
+  padding: 0;
+  font-family: "Mermaid";
+  background: linear-gradient rgb(192,168,130);
+  }
+  .login-box {
+    top:50%;
+    left:50%;
+    padding:40px;
+    background:rgba(192, 168, 130, 0.46);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgb(135, 73, 73);
+    border-radius:10px;
+    margin-top:20px;
+    }
+  .login-box h3 {
+    margin: 0 0 30px;
+    padding: 0;
+    color:rgb(70,35,2);
+    text-align:center;
+    }
+  .login-box .user-box {
+    position: relative;
+    }
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color:rgb(70,35,2);
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.253);
+  outline: none;
+  background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding:10px 0;
+    color: rgb(70,35,2);
+    pointer-events: none;
+    transition: .5s;
+    }
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top:-20px;
+    left: 0;
+    color: #ff0043;
+    font-size: 12px;
+  }
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding:10px 20px;
+    color:rgb(70,35,2);
+    font-size:16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top:40px;
+    letter-spacing:4px;
+    }
+  .login-box a:hover {
+    background:#ff0043;
+    color:white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ff0043, 0 0 25px #ff0043, 0 0 50px #ff0043, 0 0 100px #ff0043;
+    }
+  .login-box a span {
+    position: absolute;
+    display: block;
+    }
+  .login-box a span:nth-child(1) {
+    top: 0;
+    left:-100%;
+    width:100%;
+    height:2px;
+    background: linear-gradient(90deg, transparent, #ff0043);
+    animation: btn-anim1 1s linear infinite;
+    }
+  @keyframes btn-anim1 {
+    0% {
+      left:-100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+    }
+  .login-box a span:nth-child(2) {
+    top: 100%;
+    right:0;
+    width:2px;
+    height:100%;
+    background:linear-gradient(180deg, transparent, #ff0043);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+    }
+  @keyframes btn-anim2 {
+    0% {
+      top:-100%
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  .login-box a span:nth-child(3) {
+    bottom:0;
+    right:-100%;
+    width:100%;
+    height:2px;
+    background: linear-gradient(270deg, transparent, #ff0043);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay:.5s
+    }
+
+  @keyframes btn-anim3 {
+    0% {
+      right:-100;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+
+  .login-box a span:nth-child(4) {
+    bottom:-100%;
+    left:0;
+    width:2px;
+    height:100%;
+    background: linear-gradient(360deg, transparent, #ff0043);
+    animation:btn-anim4 1s linear infinite;
+    animation-delay:.75s
+    }
+
+  @keyframes btn-anim4 {
+    0% {
+      bottom:-100%
+    }
+    50%,100% {
+      bottom:100%;
+    }
+  }
+  .wrapper {
+    color:brown;
+    text-align: center;
+    height:5vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    }
+ 
+  @keyframes typing {
+    from {
+      width:0;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+		.whatsapp-link {
+			position: relative;
+			width: 45px;
+			height: 60px;
+			bottom: 40px;
+			right: 40px;
+			background-color: #25d366;
+			color: #fff;
+			border-radius: 100px;
+			text-align: center;
+			font-size: 60px;
+			box-shadow: 2px 2px 2px #888;
+			z-index: 1000;
+		}
+ 
+		.fa-whatsapp {
+			margin-top: 16px;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="login-box">
+		<h3><img src="imagens/5e764d178a727b2382de37368c9620b1-design-de-ovo-frito.png" width="10%" alt="">Curso completo de como fritar um ovo com a minha esposa. </h3>
+		<form>
+			<div class="user-box">
+				<input type="text" name="rafael" required="" />
+				<label>Nome</label>
+			</div>
+			<div class="user-box">
+				<input type="password" name="130992" required="" />
+				<label>Senha</label>
+			</div>
+			<p>
+				<a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=5553984742602" target="_blank">
+					<i class="fa fa-whatsapp"></i>
+				</a>
+			</p>
+		</form>
+	</div>
+</ul>
+</body>
+</html>
